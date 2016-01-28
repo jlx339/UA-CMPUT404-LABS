@@ -1,0 +1,66 @@
+______________________
+Question 1:
+After starting a brand new django application and running the runserver command, what does the browser show you?
+
+Answer 1:
+A webpage with following message:
+
+It worked!
+Congratulations on your first Django-powered page.
+
+______________________
+Question 2:
+After creating the first view within polls, what does the browser show you when navigating to / and to /polls respectively?
+
+Answer 2:
+127.0.0.1:8000/ gives me a webpage with following message:
+
+Page not found (404)
+Request Method: 	GET
+Request URL: 	http://127.0.0.1:8000/
+
+127.0.0.1:8000/polls/ gives me a webpage with following message:
+
+Hello, world. You're at the polls index.
+
+______________________
+Question 3:
+What is a Django migration and why do we need them?
+
+Answer 3:
+It created a model called Choice, a model called Question and added field question to choice. After running the migrate, it setted up database and some inital settings.
+
+______________________
+Question 4:
+What do you see after you log into the Django Administration site? From a high level, how do you get custom models to appear in the Django admin?
+
+Answer 4:
+I will have a site administration webpage. We can add/change groups and users. Also, we can add/change choices and questions. I can get custom models in polls/admin.py
+
+______________________
+Question 5:
+What do you see when you go to /polls/38/ in your browser? What about /polls/38/results and /polls/38/vote? What happens when you don’t put a number, and instead use a string? How would you modify the urls.py file to allow arbitrary alphabetic characters?
+
+Answer 5:
+/polls/38/ gives me a webpage with following message:
+You're looking at question 38.
+
+/polls/38/results/ gives me a webpage with following message:
+You're looking at the results of question 38.
+
+/polls/38/vote/ gives me a webpage with following message:
+You're voting on question 38.
+
+/polls/string gives me a Page not found 404.
+
+We can do url(ur'^(?P<question_id>[0-9]+)/$', views.detail, name='detail') to allow arbitrary alphabetic characters since 'u' tells python that the string accepts unicode characters.
+
+______________________
+Question 6:
+Why is it a bad idea to hardcode urls into the templates?
+
+Answer 6:
+It is very bad idea to hardcode urls into the template, and the code really should always be updated and the current uses should be fixed. While hardcoding urls into the templates, it may cause in mess up the directories. It will be a good idea to put the majority of the urls inside the template and define only the unique part.
+
+
+
