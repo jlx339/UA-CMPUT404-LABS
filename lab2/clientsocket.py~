@@ -14,7 +14,7 @@ clientSocket.sendall(request)
 
 response = bytearray()
 while True:
-	part = sock.recv(1024)
+	part = clientSocket.recv(1024)
 	if (part):
 		response.extend(part)
 	else:
