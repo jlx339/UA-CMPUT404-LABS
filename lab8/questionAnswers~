@@ -1,0 +1,26 @@
+
+
+
+Question 1
+
+WebSocket is a protocol providing full-duplex communication channels over a single TCP connection.
+// Cited from https://en.wikipedia.org/wiki/WebSocket 2016-3-2
+
+Question 2
+
+Create TCP connection to server, and keep it as long as needed. Server or client can easily close it. Client goes through HTTP compatible handshake process, if it succeeds, then server and client can exchange data both directions at any time. It is very efficient if application requires frequent data exchange in both ways. WebSockets do have data framing that includes masking for each message sent from client to server so data is simply encrypted.
+// Cited from http://stackoverflow.com/questions/10028770/html5-websocket-vs-long-polling-vs-ajax-vs-webrtc-vs-server-sent-events 2016-3-2
+
+Other than client sided long-polling, it has to wait to get response. 
+
+Question 3
+
+Phaser is a platform to create web games. In this lab, phaser is used for the spaceman game.
+
+Question 4
+
+Jade is a node template engine. In this lab, Jade makes the layout view of the webpages.
+
+Question 5
+
+Express is a Node web application server framework. In this lab, it allows to build multiplayers.
